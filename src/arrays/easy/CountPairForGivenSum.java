@@ -25,6 +25,8 @@ public class CountPairForGivenSum {
 // Current length is 0, because it has 0 elements.
         int length = 0;
 
+
+
 // Add 3 items into it.
         for (int i = 0; i < 3; i++) {
             array[i] = i * i;
