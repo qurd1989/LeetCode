@@ -12,34 +12,36 @@ public class PalindromeNumber {
 
         System.out.println("Enter Palindrome");
         int x = sc.nextInt();
-        System.out.println("Result is: " + isPalindromeNumber(x));
+        System.out.println("Result is: " + isPalindrome(x));
 
     }
 
     public static  boolean isPalindromeNumber( int x ){
 
-
         if (x < 0){
             return false;
         }
-
-
-        final  int numDigits = (int)(Math.floor(Math.log10(x)) +1);
-
-        int msdMask  = (int)Math.pow(10, numDigits - 1);
-
-        for (int i = 0;i <(numDigits / 2); ++i){
-
-            if (x / msdMask != x % 10) {
-
-                return false;
-
-            }
-            x %= msdMask;
+        int n = x;
+        int res = 0;
+        while (x != 0){
+           int reminder = x % 10;
+            res = res * 10 + reminder;
             x /= 10;
-            msdMask /= 100;
-
         }
-        return  true;
+        if (res == n){
+            return true;
+        }
+        return false;
+    }
+    public static boolean isPalindrome(int x){
+        String s = String.valueOf(x);
+        int n = s.length();
+        for (int i=0; i < n/2; i++) {
+            if (s.charAt(i) != s.charAt(n - i - 1)) {
+                return false;
+            }
+        }
+            return true;
+
     }
 }
