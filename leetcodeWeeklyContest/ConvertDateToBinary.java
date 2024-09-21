@@ -24,6 +24,7 @@ public class ConvertDateToBinary {
         decToBinary(month);
         result = "-" + result;
         decToBinary(day);
+        System.out.println(result);
         return result;
     }
     public static void decToBinary(int n) {
