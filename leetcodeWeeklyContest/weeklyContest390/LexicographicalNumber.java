@@ -3,7 +3,8 @@ package weeklyContest390;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LexicographicalNumber {
+public class
+LexicographicalNumber {
     public static void main(String[] args) {
 
     }
