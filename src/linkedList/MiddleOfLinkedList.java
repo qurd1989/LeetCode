@@ -1,5 +1,7 @@
 package linkedList;
 
+import java.util.List;
+
 public class MiddleOfLinkedList {
     //  Definition for singly-linked list.
     public class ListNode {
@@ -22,4 +24,16 @@ public class MiddleOfLinkedList {
         }
         return slow;
     }
+
+    public ListNode middleNode2(ListNode head) {
+        ListNode[] nodes = new ListNode[100];
+        int length = 0;
+        while (head != null) {
+            nodes[length++] = head;
+            head = head.next;
+        }
+        return nodes[length /2];
+    }
+
+
 }
