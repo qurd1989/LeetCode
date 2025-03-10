@@ -48,6 +48,8 @@ public class RansomNote {
         }
         return true;
     }
+    public void duplicateZeros(int[] arr) {
 
+    }
 
 }

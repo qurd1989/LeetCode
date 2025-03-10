@@ -1,4 +1,4 @@
-package easy;
+package arrays;
 
 public class ReversString {
 
