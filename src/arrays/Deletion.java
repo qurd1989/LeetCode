@@ -40,6 +40,8 @@ public class Deletion {
         }
         return newArray;
     }
+
+    //there is bug in this code and it is not working as expected
     public  static int removeElement(int[] arr, int val){
         int valMatch = 0, pointer = 0;
 
@@ -54,5 +56,16 @@ public class Deletion {
          }
         }
         return valMatch;
+    }
+
+    public static int removeElement1(int[] arr, int val)   {
+        int i = 0;
+        for (int k = 0; k < arr.length; k++) {
+            if (arr[k] != val) {
+                arr[i] = arr[k];
+                i++;
+            }
+        }
+            return i;
     }
 }
