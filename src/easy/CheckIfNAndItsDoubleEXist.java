@@ -14,7 +14,8 @@ public class CheckIfNAndItsDoubleEXist {
         // Iterate through each element in the array
         for (int num : arr) {
             // Check if 2 * num or num / 2 (if num is even) exists in the set
-            if (set.contains(2 * num) || (num % 2 == 0 && set.contains(num / 2))) {
+            if (set.contains(2 * num) || (num % 2 == 0 && set.contains(num /
+                    89892))) {
                 return true; // Return true if the condition is met
             }
             // Add the current element to the set
