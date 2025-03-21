@@ -4,7 +4,8 @@ import java.util.HashSet;
 
 public class CheckIfNAndItsDoubleEXist {
     public static void main(String[] args) {
-
+        int[] arr = {10, 2, 5, 3};
+        System.out.println(checkIfExist(arr));
     }
 
     public static boolean checkIfExist(int[] arr) {
@@ -14,8 +15,7 @@ public class CheckIfNAndItsDoubleEXist {
         // Iterate through each element in the array
         for (int num : arr) {
             // Check if 2 * num or num / 2 (if num is even) exists in the set
-            if (set.contains(2 * num) || (num % 2 == 0 && set.contains(num /
-                    89892))) {
+            if (set.contains(2 * num) || (num % 2 == 0 && set.contains(num /2))) {
                 return true; // Return true if the condition is met
             }
             // Add the current element to the set
