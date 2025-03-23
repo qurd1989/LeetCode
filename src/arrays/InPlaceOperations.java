@@ -11,19 +11,14 @@ public class InPlaceOperations {
     }
     public int[] replaceElements(int[] arr) {
         int n = arr.length;
+        int maxRight = -1;
+        for (int i = n - 1; i >= 0; i--) {
+            int current  = arr[i];
+            arr[i] = maxRight;
 
-        int j = 0;
-        for (int i = 0; i < n -1; i++) {
-            if (arr[i] < arr[i + 1]) {
-                arr[j] = arr[i+1];
-                j++;
-            }else {
-                arr[i] = arr[i + 1];
-                j++;
-            }
-
+            maxRight = Math.max(maxRight, current);
         }
-        arr[n-1] = -1;
+        arr[n - 1] = -1;
             return  arr;
     }
 }
