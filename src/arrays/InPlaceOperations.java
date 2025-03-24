@@ -18,7 +18,6 @@ public class InPlaceOperations {
 
             maxRight = Math.max(maxRight, current);
         }
-        arr[n - 1] = -1;
             return  arr;
     }
 }
