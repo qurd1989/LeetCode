@@ -6,7 +6,7 @@ public class ABetterREpeatedDeletionAlgorithm {
     public static void main(String[] args) {
         ABetterREpeatedDeletionAlgorithm aBetterREpeatedDeletionAlgorithm = new ABetterREpeatedDeletionAlgorithm();
         int[] arr = {17, 18, 5, 4, 6, 1};
-        System.out.println(Arrays.toString(aBetterREpeatedDeletionAlgorithm.sortArrayByParity(arr)));
+        System.out.println(Arrays.toString(aBetterREpeatedDeletionAlgorithm.sortArrayByParity1(arr)));
     }
     public int[] sortArrayByParity(int[] A){
 
@@ -29,4 +29,21 @@ public class ABetterREpeatedDeletionAlgorithm {
         */
 
     }
+    public int[] sortArrayByParity1(int[] nums) {
+     int j = nums.length -1;
+     int i = 0;
+     while(i < j) {
+         if(nums[i] % 2 > nums[j] % 2) {
+             int temp = nums[i];
+             nums[i] = nums[j];
+             nums[j] = temp;
+         }
+         if(nums[i] % 2 == 0 && nums[j] % 2 == 1) {
+             i++;
+                j--;
+         }
+     }
+        return nums;
+    }
 }
+
