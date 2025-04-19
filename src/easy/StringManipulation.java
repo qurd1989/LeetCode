@@ -27,6 +27,6 @@ public class StringManipulation {
             left++;
             right--;
         }
-        return chars.toString();
+        return new String(chars);
     }
 }
